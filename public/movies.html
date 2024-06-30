@@ -1,0 +1,230 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <title>IWATCH APP : FOR KIDS</title>
+<link rel="stylesheet" href="movies.css">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css
+">
+
+</head>
+<body>
+  <header>
+    <!--<form id="Form">
+      <input type="text" id="search" class="search" placeholder="What's on your Mind?">
+    </form>-->
+
+
+<div class="navBar">
+  <div class="navBar-container">
+    <div class="logo-container"><h1 class="logo">SUP KID!</h1></div>
+    <div class="menu-container">
+      <ul class="menu-list">
+       <li class ="menu-list-item active"id="HomeIcon" data-filter="all">Home</li>
+        <li class ="menu-list-item" data-filter="Movies">Movies</li>
+        <li class ="menu-list-item" data-filter="Series">Series</li>
+        <li class ="menu-list-item" data-filter="Animated">Animated</li>
+        <li class ="menu-list-item" data-filter="Educational">Educational</li>
+        <li class ="menu-list-item" data-filter="shows">Shows</li>
+        <li class="menu-list-item" id="addMovieDropdown">
+          <button id="addMovieButton">Add Movie</button>
+          <form id="addMovieForm" class="dropdown-content" action="/addMovie" method="POST" >
+            <input class="AddInput" type="text" name="title" placeholder="Title" required>
+            <input class="AddInput" type="text" name="synopsis" placeholder="Synopsis">
+            <input class="AddInput" type="text" name="imageUrl" placeholder="Image URL">
+            <input class="AddInput" type="text" name="genre" placeholder="Genre">
+            <button class="Add-Button" type="submit">Add Movie</button>
+          </form>
+        </li>
+      </ul>
+    </div>
+    
+
+    <div class="sorting-bar">
+      <button id="sortToggle">Sort A to Z</button>
+    </div>
+
+
+
+    <a><div class="profile-container">
+      <img class="profile-pic" src="Images\frog Avatar.png" alt="Smiling cartoon frog">
+      <div class="profile-info-container">
+        <span class="profile-info">ME</span>
+        
+      </div>
+     <!-- <div class="toggle-back">
+        >
+        i am trying to see if i am interested in building a toggle
+      </div>-->
+
+   </div>
+  </div>
+ 
+</div>
+</header>
+
+<main>
+<div class="big-container" id="all-content">
+
+  <div class="input-container">
+    <input type="text" id="searchInput" onclick="searchFunction()" placeholder="Search for a movie…">
+    <button id="searchOption" onclick="searchOnClick()">Search</button>
+    <br>
+    <br>
+    <br>
+    </div>
+
+    
+
+  <div class="content-container">
+    <a id="bigDisplay">
+    <div class="displayed-movies" >
+     <img src="Images\sponge bob bigger.jpg" width="100%;" height="100%" id="annoying-image" >
+    <div class="information"><p class="Sponge-bob-details">A yellow sea sponge named SpongeBob SquarePants, who enjoys being a cook at Krusty Krab, lives in the Pacific Ocean. He embarks on various adventures with his friends at Bikini Bottom.</p>
+    <button class="sponge-bob-button" style="cursor: pointer;" >WATCH</button></div>
+    </div>
+  </a>
+  <br>
+  <br>
+    <h1 class="movie-list-title">
+      FAVORITES
+  </h1>
+<Br></Br>
+<br>
+    <div class="movie-list">
+      
+    <div class="movie-list-wrapper" id="movieList">
+      <ul id="myMenu"><div class="movie-list">
+        <li class ="navBar-tag" data-tags="Movies"><div class="movie-list-item">
+          <img class="movie-pics"src="Images\INSIDE OUT.jpg" alt="Inside Out Movie poster">
+       <span class="movie-title">INSIDE OUT</span>
+          <P class="movie-synopsis">Eleven-year-old Riley has moved to San Francisco, leaving behind her life in Minnesota. She and her five core emotions, Fear, Anger, Joy, Disgust and Sadness, struggle to cope with her new life.</P>
+          <button class="movie-button">WATCH</button>
+          
+        </div></li>
+
+        <li class="navBar-tag" data-tags="Movies"><div class="movie-list-item">
+          <img class="movie-pics"src="Images\Tangled.jpeg" alt="Tangled Movie poster">
+         <span class="movie-title">TANGLED</span>
+          <P class="movie-synopsis">Rapunzel, an innocent, young girl, is locked up by her overly protective mother. Her wish to escape into the world outside finally comes true when she meets the good-hearted thief, Flynn.</P>
+          <button class="movie-button">WATCH</button>
+        </div></li>
+
+       <li class="navBar-tag" data-tags="Movies"> <div class="movie-list-item">
+          <img class="movie-pics"src="Images\RATATOUILLE.jpeg" alt="Ratatouille Movie poster">
+         <span class="movie-title">RATATOUILLE</span>
+          <P class="movie-synopsis">Remy, a rat, aspires to become a renowned French chef. However, he fails to realise that people despise rodents and will never enjoy a meal cooked by him.</P>
+          <button class="movie-button">WATCH</button>
+        </div></li>
+
+        <li class="navBar-tag" data-tags="Animated"><div class="movie-list-item">
+          <img class="movie-pics"src="Images\BLUEY.avif" alt="Bluey Movie poster">
+          <span class="movie-title">BLUEY</span>
+          <P class="movie-synopsis">An overenthusiastic and imaginative Blue Heeler puppy, Bluey, goes on adventures with her younger sister, Bingo, which unfolds in hilarious ways.</P>
+          <butt class="movie-button">WATCH</button>
+        </div></li>
+
+       <li class="navBar-tag" data-tags="Shows"> <div class="movie-list-item">
+          <img class="movie-pics"src="Images\MICKEY MOUSE.jpeg" alt="Mickey Mouse Movie poster">
+       <span class="movie-title">MICKEY MOUSE</span>
+          <P class="movie-synopsis">Mickey, Minnie, Pluto, Goofy, Daisy, Donald and many other clubhouse friends go on educational adventures and impart important lessons in a fun way</P>
+          <button class="movie-button">WATCH</button>
+        </div></li>
+
+       
+
+       <li class="navBar-tag" data-tags="Series"> <div class="movie-list-item">
+          <img class="movie-pics"src="Images\SOFIA THE FIRST.webp" alt="Sofia The First Movie poster">
+        <span class="movie-title">SOFIA THE FIRST</span>
+          <P class="movie-synopsis">The story follows Sofia, an average girl, whose life suddenly changes when her mother marries a king. It depicts how she adjusts to the extraordinary life and makes everyone around her feel special.</P>
+          <button class="movie-button">WATCH</button>
+        </div></li>
+
+
+       <li class="navBar-tag" data-tags="Movies"> <div class="movie-list-item">
+          <img class="movie-pics"src="Images\SOUL.jpg" alt="Soul Movie poster">
+       <span class="movie-title">SOUL</span>
+          <P class="movie-synopsis">Joe is a middle-school band teacher whose life hasn't quite gone the way he expected. His true passion is jazz and he's good. But when he travels to another realm to help someone find their passion, he soon discovers what it means to have soul.</P>
+          <button class="movie-button">WATCH</button>
+        </div></li>
+
+        <li class="navBar-tag" data-tags="Animated"><div class="movie-list-item">
+          <img class="movie-pics"src="Images\Winnie The Pooh.jpeg" alt="Winnie The Pooh Movie poster">
+        <span class="movie-title">WINNIE THE POOH</span>
+          <P class="movie-synopsis">A loyal friend to his neighbors in the Hundred Acre Wood, Pooh is always willing to lend a helping hand.</P>
+          <button class="movie-button">WATCH</button>
+        </div></li>
+
+        <li class="navBar-tag" data-tags="Series"><div class="movie-list-item">
+          <img class="movie-pics"src="Images\Doc McStuffins.jpeg" alt="Doc McStuffins Movie poster">
+        <span class="movie-title">DOC MCSTUFFINS</span>
+          <P class="movie-synopsis">Dottie McStuffins puts on her stethoscope and starts fixing toys and dolls, as she wants to become a doctor like her mother.</P>
+          <button class="movie-button">WATCH</button>
+        </div></li>
+
+        <li class="navBar-tag" data-tags="shows"><div class="movie-list-item">
+          <img class="movie-pics"src="Images\Elena of Avalor.jpeg" alt="Elena of Avalor Movie poster">
+        <span class="movie-title">ELENA OF AVALOR</span>
+          <P class="movie-synopsis">Princess Elena has saved her magical kingdom, Avalor, from an evil sorceress and must learn to rule as its crown princess.</P>
+          <button class="movie-button">WATCH</button>
+        </div></li>
+        
+        <li class="navBar-tag" data-tags="Animated"><div class="movie-list-item">
+          <img class="movie-pics"src="Images\Puppy Dog Pals.webp" alt="Puppy Dog Pals Movie poster">
+        <span class="movie-title">PUPPY DOG PALS</span>
+          <P class="movie-synopsis">Puppy brothers Bingo and Rolly like to be around Bob, their owner, and help him do various activities. While he is away, they travel across the neighbourhood and complete exciting missions.</P>
+          <button class="movie-button">WATCH</button>
+        </div></li>
+
+       <li class="navBar-tag" data-tags="shows"> <div class="movie-list-item">
+          <img class="movie-pics"src="Images\PJ MASKS.webp" alt="PJ MASKS Movie poster">
+        <span class="movie-title">PJ MASKS</span>
+          <P class="movie-synopsis">During the day, Amaya, Connor and Greg lead totally normal lives, but they transform into superheroes during the night and use their powers to fight villains and solve mysteries.</P>
+          <button class="movie-button">WATCH</button>
+        </div></li>
+
+     
+     </div>
+    </ul>
+    </div>
+    </div>
+    </div>
+  </div>
+
+</div>
+
+</main>
+
+ <footer class="footer">
+ <div id="copyRight">
+ Copyright &copy; 2024 All Rights Reserved
+ </div>
+ <div id="lastFooter">
+ <ul>
+ <li>
+ <a href="">About Us</a>
+ </li>
+ <li>
+ <a href="">Contact Us</a>
+ </li>
+ <li>
+ <a href="">Terms</a>
+ </li>
+ <li>
+ <a href="">License</a>
+ </li>
+ </ul>
+ </div>
+ </footer>
+
+
+
+
+  <script src="movies.js">
+   
+  </script>
+</body>
+
+</html>

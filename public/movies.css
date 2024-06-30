@@ -1,0 +1,427 @@
+@import url(<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=ABeeZee:ital@0;1&display=swap" rel="stylesheet">);
+
+/* Example of a media query */
+@media (max-width: 768px) {
+  /* Styles for screens smaller than 768px wide */
+}
+
+
+*{
+  margin:0;
+  box-sizing: border-box;
+}
+
+body{
+  font-family:"ABeeZee", sans-serif;
+}
+
+.navBar{
+  width:100%;
+  height: 80px;
+  background-color:whitesmoke;
+}
+
+.navBar-container{
+  display: flex;
+  align-items: center;
+  background-color:yellow;
+  padding: 0 50px;
+  height: 100%;
+  font-family:system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif
+}
+
+
+.logo-container{
+  flex: 1;
+ 
+}
+.logo{
+  font-family:system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif
+  font-weight: bold;
+  font-size: 28px;
+  color: green;
+  margin-left: 35px;
+}
+.menu-container{
+  flex:5;}
+
+  .menu-list{
+    display:flex;
+    list-style:none;
+  }
+  
+  .menu-list-item{
+    margin-right: 30px;
+    cursor: pointer;
+  }
+
+  .menu-list-item.active{
+    font-weight: bold;
+    cursor: pointer;
+    text-decoration: underline;
+  }
+  .active {
+   
+    font-weight: bold; 
+    color: blue; }
+
+
+.sorting-bar{
+  margin-left: 0px;
+}
+
+#sortToggle{
+  margin-left: 0px;
+}
+
+
+.profile-container{
+  flex:2;
+  display:flex;
+align-items: center;
+}
+
+.profile-info-container{
+  margin-left: 40px;
+  margin-right: 10px;
+  margin-bottom: 200px;
+}
+
+
+.profile-pic{
+  width: 57px;
+  height:57px;
+  border-radius: 50%;
+  object-fit: cover;
+}
+
+
+/* Dropdown form styling */
+.dropdown-content {
+  display: none;
+  position: absolute;
+  background-color: #f9f9f9;
+max-width: width 200px;;
+  box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+  z-index: 1;
+  transition: opacity 0.3s ease-in-out;
+  margin-right: 0cm30px;
+}
+
+.dropdown-content.show-form {
+  display: block;
+}
+
+.dropdown-content input,
+.dropdown-content button {
+  display: block;
+  width: 100%;
+  padding: 10px;
+  margin: 5px 0;
+  border: 1px solid #ddd;
+  box-sizing: border-box;
+}
+
+.dropdown-content button {
+  background-color: #4CAF50;
+  color: white;
+  border: none;
+  cursor: pointer;
+  margin-top: 10Px;
+  font-weight: bolder;
+  background-color: black;
+  color:white;
+  padding: 6px;
+  border: gold;
+  border-style: solid;
+  border: radius 5px;
+}
+
+.dropdown-content button:hover {
+  background-color: #45a049;
+}
+
+
+
+
+
+
+
+
+
+   #addMovieForm{
+    
+    background-color: yellow;
+    border-radius: 0.8rem 0 0 0.8rem;
+    background: yellow;
+     flex-basis: 75%;
+    padding: 1rem;
+    border: none;
+    font-weight: 900;
+    transition: all 0.2s ease-in-out;
+    margin-top:20px;
+
+    
+   }
+  
+   .AddInput{
+    border-radius: 0.8rem 0 0 0.8rem;
+  background: rgb(239, 240, 216);
+   flex-basis: 35%;
+  padding: 1rem;
+  border: none;
+  font-weight: 900;
+  transition: all 0.2s ease-in-out;
+  font-size:10px;
+  width:30px;
+  margin-top: 15px;
+
+   } 
+
+
+
+
+
+.big-container{
+   background-color: yellow;
+   min-height:100vh;
+   color:black;
+  display: block;
+}
+
+
+.input-container{
+  display: flex;
+  border-radius: 1rem;
+  margin-left: 30px;
+  margin-top: 0px;
+  margin-bottom: 30px;
+ padding: 0.3rem;
+  width: 50%;
+ gap: 1.2rem;
+}
+
+.input-container input {
+  border-radius: 0.8rem 0 0 0.8rem;
+  background: #f7f5a5;
+   flex-basis: 75%;
+  padding: 1rem;
+  border: none;
+  font-weight: 900;
+  transition: all 0.2s ease-in-out;
+  font-size:18px;
+  width: 200px;
+}
+
+.input-container button {
+  flex-basis: 25%;
+  padding: 1rem;
+ background-color: #0e0e0d;
+  font-weight: 900;
+  letter-spacing: 0.3rem;
+  text-transform: uppercase;
+  color:white;
+  border: none;
+  width: 100%;
+  border-radius: 0 1rem 1rem 0;
+  font-weight: bold; 
+  transition: all 0.2s ease-in-out;
+}
+
+.input-container button:hover {
+  background-color: rgb(80, 80, 4);
+  text-decoration-line: underline;
+  cursor:pointer;
+}
+
+
+.content-container{
+  
+  margin-left: 80px;
+  position: relative;
+  text-align: center;
+  color: black;
+  font-size: 15px;
+}
+
+.displayed-movies{
+  height:50vh;
+  width:auto;
+ background-color:hsl(187, 51%, 73%);}
+ 
+#annoying-image{
+ 
+  object-fit: cover;
+}
+.information{
+  position: absolute;
+ top: 0Px;
+ right: 0px;
+ background-color: rgb(0, 0, 0,0.6);
+ color:white;
+
+ padding: 20px;
+ width: 300px;
+ height:fit-content; 
+ margin: auto,auto;
+}
+
+.sponge-bob-button{
+  margin-top: 10Px;
+  font-weight: bolder;
+  background-color: black;
+  color:white;
+  padding: 6px;
+  border: gold;
+  border-style: solid;
+  border: radius 5px;
+}
+
+.movie-list-title{
+  font-family: 'Audiowide', cursive;
+  font-size: 2rem;
+  position: sticky;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  letter-spacing: 3px;
+  margin-left: 10px;
+  color:rgb(10, 10, 10);
+  animation-name: slideInFromLeft;
+      animation-duration: 5s;
+      animation-iteration-count: 2;
+}
+
+
+.movie-list{
+ padding: 0px;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content:space-around;
+  align-items: center;
+  gap: 30px , 30px;
+  margin: 0px auto;
+ 
+}
+
+.movie-list-wrapper{
+  position: relative;
+}
+
+#myMenu{
+  list-style-type: none;
+  margin-bottom: 60px;
+}
+
+.movie-list-item{
+min-height: 0;
+position: relative;
+margin-bottom: 40px;
+transition: 1s ease-in-out;
+}
+.movie-list-item:hover{
+  opacity: 1;
+}
+
+.movie-pics{
+  width:290px;
+  height:200px;
+  margin-left: 20px;
+  object-fit: cover;
+  transition: 1s ease-in-out;
+}
+.movie-pics:hover{
+  transform: scale(1.2);
+  margin: 0,10px;
+  opacity: 0.6;
+}
+
+
+
+.movie-title{
+  background-color: rgba(0, 0, 0,0.4);
+  padding: 0,10px;
+  font-size: 25px;
+  font-weight: bolder;
+  color: white;
+  position: absolute;
+  top: 40%;
+  left:20px;
+  transition:1s all ease-in-out;
+  
+}
+
+
+.movie-synopsis{
+  position: absolute;
+ bottom: 0Px;
+ left: 20px;
+ 
+ background-color: rgba(0, 0, 0,0.5);
+ color:white;
+font-size: smaller;
+ padding: 10,15px;
+ width: 210px;
+ height:fit-content; 
+ margin: auto,auto;
+ opacity: 0;
+ }
+
+ .movie-synopsis:hover{
+  opacity: 1;
+ }
+.movie-button{
+  position: absolute;
+  bottom: 0;
+  left: 240px;
+  margin-top: 10Px;
+  font-weight: bolder;
+  background-color: black;
+  color:white;
+  padding: 6px;
+  border: gold;
+  border-style: solid;
+  border: radius 5px;
+ 
+}
+
+.movie-button{
+  cursor: pointer;
+  opacity: 0.5;
+  
+}
+
+.footer{
+  background-color: orange;
+  margin-left: 0px;
+}
+.footer{
+  display: flex;
+  width: 100%;
+  justify-content: space-between;
+  align-items: center;
+  color: whitesmoke;
+
+}
+footer div{
+  margin: 0 10px;
+  font-size: 15px;
+}
+footer div ul{
+  display: flex;
+  flex-wrap: nowrap;
+ 
+}
+footer div ul li{
+  display: flex;
+  flex-wrap: nowrap;
+}
+footer div ul li a{
+  text-decoration: none;
+  width: 100%;
+  color: whitesmoke;
+  margin: 0.5em;
+  font-size: larger;
+}
