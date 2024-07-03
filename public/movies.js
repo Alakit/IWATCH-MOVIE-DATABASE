@@ -297,11 +297,47 @@ document.addEventListener('DOMContentLoaded', function() {
 
 
 
+//for connecting with my back end
+fetch('/movies') 
+  .then(response => response.json())
+  .then(data => {
+    
+  })
+  .catch(error => {
+    console.error('Error fetching data:', error);
+  });
 
 
 
-
-
+  const formData = {
+    title: 'New Movie',
+    synopsis: 'Synopsis of the new movie',
+    imageUrl: 'image-url.jpg',
+    genre: 'Action',
+  };
+  
+  fetch('/addMovie', {
+    method: 'POST',
+    headers: {
+      'Content-Type': 'application/json',
+    },
+    body: JSON.stringify(formData),
+  })
+  .then(response => {
+    if (!response.ok) {
+      throw new Error('Failed to add movie');
+    }
+    return response.text();
+  })
+  .then(data => {
+    console.log('Movie added successfully:', data);
+   
+  })
+  .catch(error => {
+    console.error('Error adding movie:', error);
+    
+  });
+  
 
 
 
